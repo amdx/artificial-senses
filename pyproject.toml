@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "artificial_senses"
+version = "v1.0"
+description = "Artificial Senses Demo"
+authors = ["Marco Fagiolini <mfx@amdx.de>"]
+license = "AGPL-3.0-only"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "~3.11"
+pyrealsense2 = "2.55.1.6486"
+pyglet = "2.0.15"
+ultralytics = "8.2.18"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.4.2"
+mypy = "^1.10.0"
+ruff = "^0.4.9"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+artificial-senses = "artificial_senses.app:run"
